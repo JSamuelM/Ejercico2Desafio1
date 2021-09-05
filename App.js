@@ -14,7 +14,6 @@ import Result from "./src/components/Result";
 export default function App(){
   const [name, setName] = useState(null);
   const [salary, setSalary] = useState(null);
-  //const [c, setC] = useState(null);
   const [total, setTotal] = useState(null);
   const [errorMessage, setErrorMessage] = useState('');
 
@@ -29,8 +28,6 @@ export default function App(){
     const deduccionAfp = (salary * 0.04);
     const deduccionRenta = (salary * 0.05);
     const salarioNeto = salary- (deduccionIss + deduccionAfp + deduccionRenta);
-    //const x1 = ((b*(-1)) + Math.sqrt(determinante)) / (2*a);
-    //const x2 = ((b*(-1)) - Math.sqrt(determinante)) / (2*a);
     setTotal({
       desIss: deduccionIss,
       desAfp: deduccionAfp,
@@ -54,7 +51,6 @@ export default function App(){
       <Form
         setName={setName}
         setSalary={setSalary}
-        //setC={setC}
       />
     </SafeAreaView>
     <Result
@@ -67,16 +63,6 @@ export default function App(){
     </>
   );
 }
-
-
-
-
-
-
-
-
-
-
 
 const styles = StyleSheet.create({
   Header: {
